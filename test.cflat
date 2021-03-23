@@ -1,0 +1,68 @@
+int i;
+int j;
+bool b;
+bool c;
+struct S {
+    int x;
+    bool y;
+};
+struct S s;
+
+int intf(int i1) {
+    return i; 
+}
+
+void vf(int i1, int i2) {
+    return; 
+}
+
+void vff(int i1, bool b2) {
+    return;
+}
+
+bool bf() {
+    return b; 
+}
+
+void main() {
+    cout << i;
+    cout << b;
+    cout << s.x;
+    cout << s.y;
+    cout << intf(i);
+    cin >> i;
+    cin >> b;
+    cin >> s.x;
+    cin >> s.y;
+    i = intf(i);
+    vf(i,i);
+    vff(i,b);
+    b = bf();
+    i = i + j;
+    i = i - j;
+    i = i * j;
+    i = i / j;
+    i++;
+    j--;
+    b = i < j;
+    b = i > j;
+    b = i <= j;
+    b = i >= j;
+    b = b && c;
+    b = b || c;
+    if (b) { i = i; }
+    if (c) { i = i; }
+    while (b) { i = i; }
+    while (c) { i = i; }
+    repeat (i) { i = i; }
+    repeat (j) { i = i; }
+    b = i == j;
+    b = i != j;
+    c = b == c;
+    c = b != c;
+    i = j = s.x;
+    b = c = s.y;
+}
+    
+    
+    

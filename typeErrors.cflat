@@ -1,0 +1,126 @@
+int i;
+bool b;
+struct S {
+    int x;
+    bool y;
+};
+struct S  s;
+
+int intf(int i1) {
+    return i; 
+}
+
+void vf(int i1, int i2) {
+    return; 
+}
+
+void vff() {}
+
+bool bf() {
+    return b; 
+}
+
+void main() {
+    //write test
+    //  Attempt to write a function
+    cout << intf; 
+    cout << bf; 
+    cout << vf;
+    //  Attempt to write a struct name 
+    cout << S; 
+    //  Attempt to write a struct variable
+    cout << s;
+    //  Attempt to write void
+    cout << vff(); 
+    
+    //read test
+    //	Attempt to read a function
+    cin >> intf;
+    cin >> bf;
+    cin >> vf;
+    //  Attempt to read a struct name
+    cin >> S;
+    //	Attempt to read a struct variable
+    cin >> s;
+    
+    //call test
+    //  Attempt to call a non-function
+    i();
+    b();
+    S();
+    s();
+    //  Function call with wrong number of args
+    i = intf();
+    i = intf(i,i);
+    vf();
+    vf(i);
+    b = bf(i);
+    
+    //wrong type test
+    //  Arithmetic operator applied to non-numeric operand
+    i = i + b;
+    i = b - b;
+    i = b * s;
+    i = i / s;
+    b++;
+    s--;
+    //  Relational operator applied to non-numeric operand
+    b = i < b;
+    b = b > b;
+    b = b <= s;
+    b = i >= s;
+    //  Logical operator applied to non-bool operand
+    b = !i;
+    b = !s;
+    b = i && b;
+    b = i || s;
+    // Non-bool expression used as an intf condition
+    if (i) { i = i; }
+    if (s) { i = i; }
+    //	Non-bool expression used as a while condition
+    while (i) { i = i; }
+    while (s) { i = i; }
+    //  Non-integer expression used as a repeat clause
+    while (b) { i = i; }
+    while (s) { i = i; }
+    //  Type mismatch
+    b = i == b;
+    b = b != s;
+    
+    //Equality test
+    //  Equality operator applied to void functions
+    b = vf() == vff();
+    //  Equality operator applied to functions
+    b = vf == vff;
+    b = vf != vff;
+    //  Equality operator applied to struct names
+    b = S == S;
+    b = S != S;
+    //  Equality operator applied to struct variables
+    b = s == s;
+    b = s != s;
+    
+    //assignment test
+    //	Function assignment
+    vf = vff;
+    //	Struct name assignment
+    S = S;
+    //	Struct variable assignment
+    s = s;
+}
+
+//return test
+int intff(int i1) {
+    //  Missing return value
+    return; 
+}
+
+void vfff(int i1, int i2) {
+    //  Return with a value in a void function
+    return i; 
+}
+
+bool bff() {
+    //  Bad return value
+    return i; 
+}
